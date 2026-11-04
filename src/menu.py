@@ -1,4 +1,9 @@
 # Creating a file to display the users options for the shopping list
+# Importing shopping list from the data file
+from shopping_lists import shopping_list
+
+
+from shopping_lists import view_list
 
 
 def show_menu():
@@ -20,7 +25,7 @@ def show_menu():
         elif choice == "2":
             print("You chose to Remove an item from your shopping list")
         elif choice == "3":
-            print("You chose to View your shopping list")
+            view_list()
         elif choice == "4":
             is_running = False
         else:

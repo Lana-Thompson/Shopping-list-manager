@@ -3,9 +3,9 @@ from menu import show_menu
 
 
 def start_app():
-    print("Welcome to the Shopping List Manager!")
+    print("Welcome to you personal Shopping List Manager!")
     show_menu()
-    print("\nGoodbye!")
+    print("\nHave a great day!")
 
 
 if __name__ == "__main__":
