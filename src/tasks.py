@@ -1,19 +1,19 @@
-# import json
+import json
 
 
-# # this function is used to save any changes made to the lists
-# def save_list(shopping_list, filename):
-#     with open(f"{filename}.json", "w") as file:
-#         json.dump(shopping_list, file, indent=4)
+# this function is used to save any changes made to the lists
+def save_list(shopping_list, filename):
+    with open(f"{filename}.json", "w") as file:
+        json.dump(shopping_list, file, indent=4)
 
 
-# # This function reloads the most current version of the shopping lists every time the program is run
-# def load_list(filename):
-#     try:
-#         with open(f"{filename}.json", "r") as file:
-#             return json.load(file)
-#     except FileNotFoundError:
-#         return []
+# This function reloads the most current version of the shopping lists every time the program is run
+def load_list(filename):
+    try:
+        with open(f"{filename}.json", "r") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return []
 
 
 # Helper function for getting a valid quantity from users
