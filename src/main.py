@@ -5,14 +5,14 @@ from tasks import load_list
 
 def start_app():
     print("Welcome to your personal Shopping List Manager!")
-    show_menu()
-    # while True:
-    #     filename = list_choices()
-    #     shopping_list = load_list(filename)
-    #     action = show_menu(shopping_list, filename)
 
-    #     if action == "exit":
-    #         break
+    while True:
+        filename = list_choices()
+        shopping_list = load_list(filename)
+        action = show_menu(shopping_list, filename)
+
+        if action == "exit":
+            break
 
     print("\nHave a great day!")
 

@@ -6,23 +6,23 @@ import os
 from tasks import view_list, adding_items, removing_items, clear_items, save_list
 
 
-# def list_choices():
-#     while True:
-#         print("What would you like to shop for today? \n")
-#         print("1) Groceries")
-#         print("2) Beauty/Health")
-#         print("3) Household Supplies")
+def list_choices():
+    while True:
+        print("What would you like to shop for today? \n")
+        print("1) Groceries")
+        print("2) Beauty/Health")
+        print("3) Household Supplies")
 
-#         choice = input("\nSelect an action (Enter 1-3): ").strip()
+        choice = input("\nSelect an action (Enter 1-3): ").strip()
 
-#         if choice == "1":
-#             return "grocery"
-#         elif choice == "2":
-#             return "beauty_health"
-#         elif choice == "3":
-#             return "house_supplies"
-#         else:
-#             print(f"{choice} is not a valid selection. Please try again.")
+        if choice == "1":
+            return "grocery"
+        elif choice == "2":
+            return "beauty_health"
+        elif choice == "3":
+            return "house_supplies"
+        else:
+            print(f"{choice} is not a valid selection. Please try again.")
 
 
 def show_menu(shopping_list, filename):
