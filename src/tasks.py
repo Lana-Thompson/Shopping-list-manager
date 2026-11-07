@@ -103,51 +103,51 @@ def adding_items(shopping_list):
     )
 
 
-# def removing_items(shopping_list):
+def removing_items(shopping_list):
 
-#     if len(shopping_list) == 0:
-#         print(
-#             "You're shopping list is empty right now, select option 1 to add some items!"
-#         )
-#         return
+    if len(shopping_list) == 0:
+        print(
+            "You're shopping list is empty right now, select option 1 to add some items!"
+        )
+        return
 
-#     while True:
-#         item_name = input("What item would you like to remove? ").strip().lower()
+    while True:
+        item_name = input("What item would you like to remove? ").strip().lower()
 
-#         if item_name[-1] == "s":
-#             item_name = item_name[:-1]
+        if item_name[-1] == "s":
+            item_name = item_name[:-1]
 
-#         item = next(
-#             (items for items in shopping_list if items["name"] == item_name), None
-#         )
+        item = next(
+            (items for items in shopping_list if items["name"] == item_name), None
+        )
 
-#         if item == None:
-#             print("\nThat items not currently in your list. Please try again")
-#             continue
+        if item == None:
+            print("\nThat items not currently in your list. Please try again")
+            continue
 
-#         else:
-#             while True:
-#                 item_quantity = getting_valid_quantity(item_name)
+        else:
+            while True:
+                item_quantity = getting_valid_quantity(item_name)
 
-#                 if item["quantity"] < int(item_quantity):
-#                     print(
-#                         "\nThe amount of items you want to remove is too large. Please try again."
-#                     )
-#                     continue
+                if item["quantity"] < int(item_quantity):
+                    print(
+                        "\nThe amount of items you want to remove is too large. Please try again."
+                    )
+                    continue
 
-#                 if item["quantity"] == int(item_quantity):
-#                     shopping_list.remove(item)
-#                     print(f"You've removed {item_name}s from your list!")
-#                     break
+                if item["quantity"] == int(item_quantity):
+                    shopping_list.remove(item)
+                    print(f"You've removed {item_name}s from your list!")
+                    break
 
-#                 if item["quantity"] > int(item_quantity):
-#                     item["quantity"] -= int(item_quantity)
-#                     print(
-#                         f"You've removed {item_quantity} {item_name}{'s' if int(item_quantity) > 1 else ''} from your list!"
-#                     )
-#                     break
+                if item["quantity"] > int(item_quantity):
+                    item["quantity"] -= int(item_quantity)
+                    print(
+                        f"You've removed {item_quantity} {item_name}{'s' if int(item_quantity) > 1 else ''} from your list!"
+                    )
+                    break
 
-#         break
+        break
 
 
 # def clear_items(shopping_list):
