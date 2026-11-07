@@ -150,7 +150,7 @@ def removing_items(shopping_list):
         break
 
 
-# def clear_items(shopping_list):
-#     shopping_list.clear()
+def clear_items(shopping_list):
+    shopping_list.clear()
 
-#     print("\nShopping list cleared!")
+    print("\nShopping list cleared!")
