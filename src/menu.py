@@ -3,9 +3,19 @@
 
 import os
 
-from tasks import view_list, adding_items, removing_items, clear_items, save_list
+from tasks import (
+    view_list,
+    add_items,
+    remove_items,
+    clear_items,
+    save_list,
+    get_valid_item_name,
+    get_valid_quantity,
+    get_valid_item_price,
+)
 
 
+# displays the options of shopping list the user can interact with
 def list_choices():
     while True:
         print("What would you like to shop for today? \n")
@@ -25,6 +35,7 @@ def list_choices():
             print(f"{choice} is not a valid selection. Please try again.")
 
 
+# displays the task options the user can make
 def show_menu(shopping_list, filename):
     while True:
         print("\nMenu: ")
@@ -41,9 +52,19 @@ def show_menu(shopping_list, filename):
         choice = input("\nSelect an action (Enter 1-6): ").strip()
 
         if choice == "1":
-            adding_items(shopping_list)
+            item_name = get_valid_item_name()
+            item_price = float(get_valid_item_price(item_name))
+            item_quantity = int(get_valid_quantity(item_name))
+            add_items(shopping_list, item_name, item_price, item_quantity)
         elif choice == "2":
-            removing_items(shopping_list)
+            if len(shopping_list) == 0:
+                print(
+                    "You're shopping list is empty right now, select option 1 to add some items!"
+                )
+                continue
+            item_name = get_valid_item_name()
+            item_quantity = get_valid_quantity(item_name)
+            remove_items(shopping_list, item_name, item_quantity)
         elif choice == "3":
             view_list(shopping_list)
         elif choice == "4":
