@@ -34,7 +34,7 @@ def get_valid_quantity(item_name):
 def get_valid_item_name():
 
     while True:
-        item_name = input("What the name of the item: ").strip().lower()
+        item_name = input("Whats the name of the item: ").strip().lower()
 
         if item_name == "":
             print("\nPlease enter an item name.")
@@ -87,8 +87,7 @@ def add_items(shopping_list, item_name, item_price, item_quantity):
     # if item already exists the quantity is increased by 1
     for items in shopping_list:
         if item_name == items["name"]:
-            items["quantity"] += 1
-            items["price"] += item_price
+            items["quantity"] += int(item_quantity)
             print(
                 f"You've added {item_quantity} more {item_name} to your shopping list"
             )

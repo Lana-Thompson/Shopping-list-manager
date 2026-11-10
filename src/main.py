@@ -1,6 +1,6 @@
 # importing menu displays from the menu file
 from menu import show_menu, list_choices
-from tasks import load_list
+from shopping_data import load_list
 
 
 def start_app():
