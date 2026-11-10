@@ -36,7 +36,7 @@ def get_valid_item_name():
     while True:
         item_name = input("Whats the name of the item: ").strip().lower()
 
-        if item_name == "":
+        if item_name == "" or item_name.isdigit():
             print("\nPlease enter an item name.")
             continue
         else:
